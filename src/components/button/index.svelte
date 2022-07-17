@@ -7,6 +7,7 @@
 data-color={color} 
 on:click={()=>onClick(text)}>{text}</div>
 
+
 <style lang="scss">
     .button {
         width: 80px;
@@ -14,7 +15,7 @@ on:click={()=>onClick(text)}>{text}</div>
         display : flex;
         align-items: center;
         justify-content: center;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
 
         &[data-color='orange'] {
