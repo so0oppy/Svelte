@@ -1,25 +1,30 @@
 <script lang="ts">
-    export let text : string;
-    export let onClick: (value : string) => void;
-    export let color: 'orange' | 'grey' | 'dark-grey' ;
+    export let text : string; //함수타입
+    export let onClick : (value: string)=> void;
+    export let color : 'orange' | 'grey' | 'dark-grey';
 </script>
-
 <div class="button" 
 data-color={color} 
-onclick={() => onClick(text)}> {text} </div>
+on:click={()=>onClick(text)}>{text}</div>
 
 <style lang="scss">
     .button {
-        width:80px;
+        width: 80px;
         height: 80px;
-        display: flex;
+        display : flex;
         align-items: center;
         justify-content: center;
         font-size: 24px;
         font-weight: 600;
 
-        &{data-color:'orange'; background-color: orange;}
-        &{data-color:'grey'; background-color: grey;}
-        &{data-color:'dark-grey'; background-color: darkgray;}
+        &[data-color='orange'] {
+            background-color: orange;
+        }
+        &[data-color='grey'] {
+            background-color: grey;
+        }
+        &[data-color='dark-grey'] {
+            background-color: darkgrey;
+        }
     }
 </style>
