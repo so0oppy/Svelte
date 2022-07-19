@@ -3,10 +3,8 @@
     export let onClick : (value: string)=> void;
     export let color : 'orange' | 'grey' | 'dark-grey';
 </script>
-<div class="button" 
-data-color={color} 
-on:click={()=>onClick(text)}>{text}</div>
 
+<div class="button" data-color={color} on:click={()=>onClick(text)}>{text}</div>
 
 <style lang="scss">
     .button {
